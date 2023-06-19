@@ -1,0 +1,20 @@
+- name: install oracle database
+#  gather_facts: no
+  hosts: ora
+  remote_user: ansible
+  collections:
+  - ansible.builtin
+  - ansible.posix
+  - community.general
+  vars:
+    this_is_me: nothing_interesting       # comment this when you need main playbook to fail
+    baska_bir_sey: yok                    # not used
+  tasks:
+  - name: paikse ping pong
+    ping:
+  - name: Fail when i commend this_is_me variable
+    debug:
+      msg: "{{ this_is_me }}"
+  - name: say something
+    debug:
+      msg: "bla bla bla"
