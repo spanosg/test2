@@ -7,7 +7,7 @@
   - ansible.posix
   - community.general
   vars:
-#    this_is_me: nothing_interesting       # comment this when you need main playbook to fail
+    this_is_me: nothing_interesting       # comment this when you need main playbook to fail
     baska_bir_sey: yok                    # not used
   tasks:
   - name: paikse ping pong
